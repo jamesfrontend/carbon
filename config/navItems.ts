@@ -1,3 +1,3 @@
-const navItems = ["Dashboard"];
+const navItems = [""]
 
-export default navItems;
+export default navItems
