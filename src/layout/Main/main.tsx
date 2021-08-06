@@ -14,9 +14,12 @@ const Main: React.FC<MainProps> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Portfolio Samples</title>
-        <meta name="description" content="MSK Front End Starter Pack" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <title>Subliminal Stimuli Portfolio</title>
+        <meta
+          name="description"
+          content="Partners THERESE, artist, and James, UX Engineer, creating digital art and content"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <TopNav navItems={navItems} onClickGrid={onClickGrid} gridOn={gridOn} />
       <>{children}</>
