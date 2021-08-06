@@ -1,0 +1,9 @@
+//Make additions to the other scss files within theming to keep build time to a minimum.
+
+//Varible to use the 16 column grid in Carbon
+$feature-flags: (
+  grid-columns-16: true,
+);
+
+//Carbon's full styles
+@import '~carbon-components/scss/globals/scss/styles';
