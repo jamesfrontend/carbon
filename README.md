@@ -1,4 +1,6 @@
-<h1 align='center'>Porfolio by James</h1>
+<h1 align='center'>Subliminal Stimuli Portfolio</h1>
+
+> Upkeep via James
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
