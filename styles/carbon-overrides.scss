@@ -1,0 +1,19 @@
+@import '../tokens/tokens';
+
+.bx--header {
+  background-color: $blush;
+  border-bottom: 1px solid $blush;
+}
+
+a.bx--header__menu-item {
+  color: $blue-grey;
+}
+
+a.bx--header__name,
+a.bx--header__name:hover {
+  color: black;
+}
+
+.bx--header__menu-trigger > svg {
+  fill: $blue-grey;
+}
