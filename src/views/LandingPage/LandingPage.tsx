@@ -113,6 +113,10 @@ const Main = styled.main`
   position: relative;
   background-color: transparent;
   padding-block: 0;
+
+  @media (orientation: landscape) {
+    overflow: unset;
+  }
 `;
 
 const MobileAboutMe = styled.div`
@@ -120,7 +124,7 @@ const MobileAboutMe = styled.div`
   display: block;
   left: 1rem;
   width: 0.5rem;
-  background-color: black;
+  background-color: ${blush};
   height: 100vh;
   top: 3rem;
   transition: opacity 700ms ease;
