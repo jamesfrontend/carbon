@@ -3,14 +3,11 @@ import {
   HeaderName,
   SkipToContent,
   HeaderNavigation,
-  HeaderMenuItem,
   HeaderGlobalBar,
   HeaderGlobalAction,
-  Toggle,
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
-  HeaderMenu,
   HeaderMenuButton,
   HeaderPanel,
   Switcher,
@@ -21,13 +18,15 @@ import { TableSplit24, Tools24 } from "@carbon/icons-react";
 import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
+import { navItems } from "../../../config";
+import MenuItems from "./menuItem";
 interface HeaderProps {
-  navItems: any;
   onClickGrid: Function;
   gridOn?: boolean;
+  devTools?: boolean;
 }
 
-export default function TopNav({ navItems, onClickGrid, gridOn }: HeaderProps) {
+export default function TopNav({ onClickGrid, devTools, gridOn }: HeaderProps) {
   const [isSideNavExpanded, setIsSideNavExpanded] = useState(false);
   const [toolMenuOpen, setToolMenuOpen] = useState(false);
   const [gitHubLogo, setGitHubLogo] = useState("/images/GitHub_Logo.png");
@@ -48,45 +47,38 @@ export default function TopNav({ navItems, onClickGrid, gridOn }: HeaderProps) {
         Stimuli
       </HeaderName>
       <HeaderNavigation aria-label="Portfolio">
-        <HeaderMenuItem href="https://wvpioneers.github.io/one" target="_blank">
-          Virtual Ventilator
-        </HeaderMenuItem>
-        <HeaderMenuItem href="https://wvpioneers.github.io/two" target="_blank">
-          Digital Coloring Book
-        </HeaderMenuItem>
-        {/* {navItems.map((item: string) => (
-          <HeaderMenuItem key={item} href={`/${item.toLowerCase()}`}>
-            {item}
-          </HeaderMenuItem>
-        ))} */}
+        <MenuItems navItems={navItems} />
       </HeaderNavigation>
-      <GitHubWrapper>
-        <a
-          href="https://github.com/jamesfrontend/carbon"
-          rel="noreferrer"
-          target="_blank"
-          onMouseOver={() => setGitHubLogo("/images/GitHub_Logo_White.png")}
-          onMouseOut={() => setGitHubLogo("/images/GitHub_Logo.png")}
-        >
-          <span className="dark-github">
-            <Image
-              layout="responsive"
-              width={100}
-              height={41}
-              alt="GitHub Link"
-              src={gitHubLogo}
-            />
-          </span>
-        </a>
-      </GitHubWrapper>
-      {/* <HeaderGlobalBar>
-        <HeaderGlobalAction
-          aria-label="dev tools"
-          isActive={toolMenuOpen}
-          onClick={() => setToolMenuOpen(!toolMenuOpen)}
-        >
-          <Tools24 />
-        </HeaderGlobalAction>
+
+      <HeaderGlobalBar>
+        <GitHubWrapper>
+          <a
+            href="https://github.com/jamesfrontend/carbon"
+            rel="noreferrer"
+            target="_blank"
+            onMouseOver={() => setGitHubLogo("/images/GitHub_Logo_White.png")}
+            onMouseOut={() => setGitHubLogo("/images/GitHub_Logo.png")}
+          >
+            <span className="dark-github">
+              <Image
+                layout="responsive"
+                width={100}
+                height={41}
+                alt="GitHub Link"
+                src={gitHubLogo}
+              />
+            </span>
+          </a>
+        </GitHubWrapper>
+        {devTools && (
+          <HeaderGlobalAction
+            aria-label="dev tools"
+            isActive={toolMenuOpen}
+            onClick={() => setToolMenuOpen(!toolMenuOpen)}
+          >
+            <Tools24 />
+          </HeaderGlobalAction>
+        )}
       </HeaderGlobalBar>
       <HeaderPanel aria-label="Header Panel" expanded={toolMenuOpen}>
         <Switcher aria-label="Switcher Container">
@@ -101,7 +93,8 @@ export default function TopNav({ navItems, onClickGrid, gridOn }: HeaderProps) {
           </SwitcherItem>
           <SwitcherDivider />
         </Switcher>
-      </HeaderPanel> */}
+      </HeaderPanel>
+
       <SideNav
         aria-label="Side navigation"
         isPersistent={false}
@@ -111,23 +104,7 @@ export default function TopNav({ navItems, onClickGrid, gridOn }: HeaderProps) {
         <>
           <SideNavItems>
             <HeaderSideNavItems>
-              {/* {navItems.map((item: string) => (
-              <HeaderMenuItem key={item} href={`/${item.toLowerCase()}`}>
-                {item}
-              </HeaderMenuItem>
-            ))} */}
-              <HeaderMenuItem
-                href="https://wvpioneers.github.io/one"
-                target="_blank"
-              >
-                Virtual Ventilator
-              </HeaderMenuItem>
-              <HeaderMenuItem
-                href="https://wvpioneers.github.io/two"
-                target="_blank"
-              >
-                Digital Coloring Book
-              </HeaderMenuItem>
+              <MenuItems navItems={navItems} />
             </HeaderSideNavItems>
           </SideNavItems>
           <MenuGit>
