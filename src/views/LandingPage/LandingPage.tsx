@@ -10,6 +10,7 @@ import {
 } from "../../../config/content";
 import { LandingPageTypes } from "./types";
 import { blush } from "../../../tokens/tokens";
+import styles from "./landing.module.scss";
 
 interface HomeProps {}
 
@@ -31,7 +32,8 @@ export default function LandingPage({}: HomeProps) {
       className: "ten",
       title: TENTITLE,
       content: TENCONTENT,
-      src: "/images/ten-intro.jpg",
+      src: "/svg/kb-illustration.svg",
+      // src: "/images/ten-intro.jpg",
       linkedinUrl: "https://www.linkedin.com/in/mysteriousxbeauty/",
       linkedinName: "mysteriousxbeauty",
       position: kbTop,
@@ -40,7 +42,7 @@ export default function LandingPage({}: HomeProps) {
       className: "jn",
       title: JNTITLE,
       content: JNCONTENT,
-      src: "/images/jn-intro.jpg",
+      src: "/svg/jn-illustration.svg",
       linkedinUrl: "https://www.linkedin.com/in/jamesnpro/",
       linkedinName: "jamesnpro",
       position: jnTop,
