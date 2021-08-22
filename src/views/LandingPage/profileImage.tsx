@@ -9,6 +9,7 @@ import {
   ProfileImageProps,
   ProfileImageTypes,
 } from "./types";
+import styles from "./landing.module.scss";
 
 const OverlayInfo = ({ linkedinName, linkedinUrl }: OverlayProps) => {
   return (
@@ -34,7 +35,7 @@ const ImageLayout = ({
         <Image
           layout="responsive"
           height={400}
-          width={300}
+          width={400}
           alt="intro picture"
           src={src}
         />
@@ -78,7 +79,7 @@ export const MobileProfileImage = ({
   linkedinUrl,
 }: ProfileImageProps) => {
   return (
-    <Row>
+    <Row className={styles.pt100}>
       <Column lg={0} md={0}>
         <MobileImageDiv>
           <ImageLayout
@@ -96,6 +97,7 @@ export const MobileProfileImage = ({
 
 const Div = styled.div`
   position: relative;
+  border: 1px solid black;
   &:hover {
     .overlay {
       height: 100%;
@@ -169,6 +171,20 @@ const ImageDiv = styled.div<ProfileImageTypes>`
 
   @media (max-width: 671px) {
     display: none;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    &.jn,
+    &.kb {
+      top: 5%;
+    }
+  }
+
+  @media screen and (max-height: 660px) {
+    &.jn,
+    &.kb {
+      top: 5%;
+    }
   }
 `;
 
