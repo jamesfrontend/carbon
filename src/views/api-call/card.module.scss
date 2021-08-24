@@ -1,0 +1,43 @@
+@mixin field {
+  padding-inline-start: 4rem;
+  position: relative;
+
+  &:before {
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  padding-inline-start: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  span:not(:first-child) {
+    padding-block-start: 2rem;
+  }
+}
+
+.field {
+  @include field();
+  &:before {
+    content: 'Name:';
+  }
+}
+
+.fieldTwo {
+  @include field();
+
+  &:before {
+    content: 'House:';
+  }
+}

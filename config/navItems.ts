@@ -1,7 +1,7 @@
 export const navItems = [
   {
     label: "API Calls",
-    href: "/api",
+    href: "/api-calls",
   },
   {
     label: "Virtual Ventilator",
