@@ -9,7 +9,7 @@ interface IProps {
 
 const ApiPage = () => {
   const [source, setSource] = useState([]);
-  const url = "http://hp-api.herokuapp.com/api/characters";
+  const url = "https://hp-api.herokuapp.com/api/characters";
   useEffect(() => {
     getData();
   }, []);
