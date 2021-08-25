@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Subliminal Stimuli Portfolio</title>
       </Head>
-      <TopNav onClickGrid={onClickGrid} devTools gridOn={gridOn} />
+      <TopNav onClickGrid={onClickGrid} gridOn={gridOn} />
       <Component {...pageProps} />
       {gridOn && <OverlayGrid />}
     </>

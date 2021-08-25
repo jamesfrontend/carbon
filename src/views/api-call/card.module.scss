@@ -7,6 +7,15 @@
     position: absolute;
     left: 0;
   }
+
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: column;
+    &:before {
+      position: unset;
+    }
+  }
 }
 
 .cardWrapper {
@@ -24,6 +33,9 @@
 
   span:not(:first-child) {
     padding-block-start: 2rem;
+  }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    padding-inline-start: 1rem;
   }
 }
 
