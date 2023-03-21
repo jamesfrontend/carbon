@@ -53,7 +53,7 @@ export default function TopNav({ onClickGrid, devTools, gridOn }: HeaderProps) {
       <HeaderGlobalBar>
         <GitHubWrapper>
           <a
-            href="https://github.com/jamesfrontend/carbon"
+            href="https://github.com/jimmynXD"
             rel="noreferrer"
             target="_blank"
             onMouseOver={() => setGitHubLogo("/images/GitHub_Logo_White.png")}
