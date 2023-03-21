@@ -149,23 +149,13 @@ const ImageDiv = styled.div<ProfileImageTypes>`
   position: absolute;
   transform: translateX(-50%);
 
-  &.ten {
+  &.jn {
     left: calc(50% - 200px);
     top: ${({ top }) => top};
     z-index: 2;
 
     @media (max-width: 880px) {
       left: calc(50% - 105px);
-    }
-  }
-
-  &.jn {
-    left: calc(50% + 200px);
-    top: ${({ top }) => top};
-    z-index: 1;
-
-    @media (max-width: 880px) {
-      left: calc(50% + 205px);
     }
   }
 

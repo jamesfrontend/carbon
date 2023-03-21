@@ -2,15 +2,10 @@ import { Column, Grid, Row } from "carbon-components-react";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MobileProfileImage, ProfileImage } from "./profileImage";
-import {
-  JNCONTENT,
-  JNTITLE,
-  TENCONTENT,
-  TENTITLE,
-} from "../../../config/content";
+import { JNCONTENT, JNTITLE } from "../../../config/content";
 import { LandingPageTypes } from "./types";
 import { blush } from "../../../tokens/tokens";
-import styles from "./landing.module.scss";
+// import styles from "./landing.module.scss";
 
 interface HomeProps {}
 
@@ -28,16 +23,6 @@ export default function LandingPage({}: HomeProps) {
   }, []);
 
   const profileImageData = [
-    {
-      className: "ten",
-      title: TENTITLE,
-      content: TENCONTENT,
-      src: "/svg/kb-illustration.svg",
-      // src: "/images/ten-intro.jpg",
-      linkedinUrl: "https://www.linkedin.com/in/mysteriousxbeauty/",
-      linkedinName: "mysteriousxbeauty",
-      position: kbTop,
-    },
     {
       className: "jn",
       title: JNTITLE,
@@ -161,7 +146,7 @@ const AboutMe = styled.div<LandingPageTypes>`
   opacity: ${({ opacity }) => opacity};
   transition: opacity 700ms ease;
   &:after {
-    content: "About Us";
+    content: "About Me";
     font-weight: 700;
     letter-spacing: 0.16em;
     font-family: inherit;
